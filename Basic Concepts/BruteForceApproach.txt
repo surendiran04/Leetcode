@@ -1,0 +1,4 @@
+The brute force approach is a straightforward and exhaustive method used to solve problems. It involves systematically checking all possible solutions or combinations until the correct one is found. 
+While it may not be the most efficient method,it can be useful when other optimization techniques are not applicable or when the problem space is small enough to handle.
+* The brute force method is ideal for solving small and simpler problems.
+* Brute force algorithms are slow.
