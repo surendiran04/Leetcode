@@ -42,6 +42,7 @@ cout << arr[1].second;
 // capacity() – Returns the size of the storage space currently allocated to the vector expressed as number of elements.
 // resize(n) – Resizes the container so that it contains ‘n’ elements.
 // empty() – Returns whether the container is empty.
+//sort(starting index address,ending index address) - to sort an array/vector.
 
 
 // assign() – It assigns new value to the vector elements by replacing old ones
