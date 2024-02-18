@@ -35,7 +35,7 @@ public:
         return map[maxCount];
     }
 };
-//easier technique by unordered map
+//easier technique by unordered map -O(n)
 unordered_map<int,int> map;
         int n=nums.size()/2;
         for(auto a:nums){
@@ -48,7 +48,7 @@ unordered_map<int,int> map;
         }
         return 0;
 
-//count of the number must be greater than size/2 ,so the size/2th element must be that element
+//count of the number must be greater than size/2 ,so the size/2th element must be that element - O(nlogn)
 sort(nums.begin(), nums.end());
         int n = nums.size();
         return nums[n/2];
