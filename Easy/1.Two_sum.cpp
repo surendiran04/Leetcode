@@ -14,7 +14,7 @@ public:
             if(map.find(target-nums[i])!=map.end()){
                   return {map[target-nums[i]],i};   //hash fn operation takes only constant time
             }
-            map[nums[i]]=i;
+            map[nums[i]]=i; //until the target-nums[i] founds in the map,it adds the number and its index as value
         }
         return {-1,-1};
        
