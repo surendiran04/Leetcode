@@ -35,3 +35,20 @@ public:
         return map[maxCount];
     }
 };
+//easier technique by unordered map
+unordered_map<int,int> map;
+        int n=nums.size()/2;
+        for(auto a:nums){
+            map[a]++;
+        }
+        for (auto a : map) {
+            if (a.second > n) {
+                return a.first; 
+            }
+        }
+        return 0;
+
+//count of the number must be greater than size/2 ,so the size/2th element must be that element
+sort(nums.begin(), nums.end());
+        int n = nums.size();
+        return nums[n/2];
