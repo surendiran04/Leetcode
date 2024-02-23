@@ -10,7 +10,7 @@ public:
             else if(mid*mid>x) high= mid-1;
             else low=mid+1;
         }
-        return high;
+        return high; //*****
     }
 };
 //100% efficient code
