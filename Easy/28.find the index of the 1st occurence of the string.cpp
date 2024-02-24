@@ -5,7 +5,7 @@ public:
             return -1;
         }
         for (int i = 0; i <= haystack.length() - needle.length(); ++i) {
-            if (haystack.substr(i, needle.length()) == needle) {
+            if (haystack.substr(i, needle.length()) == needle) { //substr fn creates a substring to the length of the needle,i is the starting index of the substring
                 return i;
             }
         }
