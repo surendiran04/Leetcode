@@ -1,0 +1,18 @@
+class Solution {
+public:
+    vector<int> searchRange(vector<int>& nums, int target) {
+        vector<int> v={-1,-1};
+        if(nums.empty()){
+            return v;
+        }
+        int i = lower_bound(nums.begin(), nums.end(), target) - nums.begin(); 
+        int j = upper_bound(nums.begin(), nums.end(), target) - nums.begin();
+        
+        if(i!=nums.size() && nums[i]==target && nums[j-1]==target && j>=0){  //edge cases
+            v.clear();  //need to clear the -1 then push the indexes
+            v.push_back(i);
+            v.push_back(j-1);
+        }
+        return v;
+    }
+};
