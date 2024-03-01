@@ -1,5 +1,8 @@
 class Solution {
 public:
+//Time Complexity: O(n^2) due to sorting and the two-pointer approach.
+//Space Complexity: O(1) as no extra space is required.
+
     vector<vector<int>> threeSum(vector<int>& nums) {
         sort(nums.begin(),nums.end());
         vector<vector<int>> result;
