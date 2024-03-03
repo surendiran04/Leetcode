@@ -33,3 +33,24 @@ public:
         return head;
     }
 };
+//another logic -- 1st logic is more efficient
+class Solution {
+public:
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        ListNode* temp =head;
+        int list_size=0;
+        while(temp!=NULL){
+            temp =temp->next;
+            list_size++;
+        }
+        
+       temp =head;
+       if(list_size-n==0){return head->next;}
+         for (int cnt = 0; cnt < list_size - n - 1; cnt++) {
+            temp = temp->next;
+        }
+        temp->next=temp->next->next;
+       
+        return head;
+    }
+};
