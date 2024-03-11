@@ -17,3 +17,29 @@ public:
         return ans;
     }
 };
+//passed all the testcases
+class Solution {
+public:
+    string customSortString(string order, string s) {
+        string ans="";
+        unordered_map<char,int> map;
+        for(char ch:s){ //storing  the freq
+            map[ch]++;
+        }
+        for(auto c:order){
+            int x=map[c];
+            if(x!=0){
+                for(int i=0;i<x;i++){ //printing freq times
+                    ans=ans+c;
+                }
+                map.erase(c);
+            }
+        }
+        for(auto it:map){
+            for (int i = 0; i < it.second; i++) { 
+            ans=ans+it.first; // appending the rest of char freq times
+            }
+        }
+        return ans;
+    }
+};
