@@ -37,7 +37,7 @@ public:
             }
         }
         for(auto it:map){
-            for (int i = 0; i < it.second; i++) { 
+            for (int i = 0; i < it.second; i++) { // can also use ans.append(charCount[x],x);
             ans=ans+it.first; // appending the rest of char freq times
             }
         }
