@@ -8,7 +8,8 @@ public:
             size_t x=s.find(c); //find gives the index of the char orelse -1
             if(x!=string::npos){ //npos means -1
                 ans=ans+c;
-                s.erase(x,1); //erasing the added char from s string
+                s.erase(x,1); //erasing the added char from s string .erase(x,1)- deletes only the specifix elements 
+                                                                      //orelse it'll delete all the elements after that index
             }
         }
        for(auto c:s){ //we can also append via ans=ans+s
