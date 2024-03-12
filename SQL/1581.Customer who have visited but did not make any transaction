@@ -1,0 +1,26 @@
+ Visits:
++-------------+---------+
+| Column Name | Type    |
++-------------+---------+
+| visit_id    | int     |
+| customer_id | int     |
++-------------+---------+
+visit_id is the column with unique values for this table.
+
+Transactions:
++----------------+---------+
+| Column Name    | Type    |
++----------------+---------+
+| transaction_id | int     |
+| visit_id       | int     |
+| amount         | int     |
++----------------+---------+
+transaction_id is column with unique values for this table.
+
+Write a solution to find the IDs of the users who visited without making any transactions and the number of times they made these types of visits.
+
+select v.customer_id,count(*) as count_no_trans //using left join
+from visits v left join transactions t
+on v.visit_id = t.visit_id     
+where t.visit_id is NULL  //compares both the table gives only where the t.visit_id null
+group by v.customer_id; 
