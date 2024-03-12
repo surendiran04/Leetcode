@@ -24,3 +24,11 @@ from visits v left join transactions t
 on v.visit_id = t.visit_id     
 where t.visit_id is NULL  //compares both the table gives only where the t.visit_id null
 group by v.customer_id; 
+
+select customer_id,count(*) as count_no_trans
+from visits
+where visit_id NOT in //IN calculates does require any condition in subquery
+(select visit_id 
+from transactions)
+group by customer_id;
+
