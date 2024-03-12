@@ -1,1 +1,4 @@
 https://www.geeksforgeeks.org/sql-tutorial/?ref=lbp
+
+IN - checks the data is fetched by the subquery ,usually prefered for small set of values
+EXISTS - Checks the exist of the value and retuns true/false ,faster than IN when dealing with larger amount of data
