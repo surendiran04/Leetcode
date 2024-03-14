@@ -1,4 +1,4 @@
-class Solution {
+class Solution { //solved using prefix sum concept
 public:
     int numSubarraysWithSum(vector<int>& nums, int goal) {
         unordered_map<int, int> count;
