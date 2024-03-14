@@ -1,16 +1,17 @@
-class Solution { //same as qn: 930.Binary subarrays with sum
+ //same as qn: 930.Binary subarrays with sum
+class Solution {
 public:
     int subarraySum(vector<int>& nums, int k) {
         unordered_map<int,int> count;
         count[0]=1;
-        int currentSum=0;
-        int totalSubarrays=0;
+        int prefixSum=0;
+        int totalSubarrays=0; //prefixsum approach
         for(auto num:nums){
-            currentSum+=num;
-            if(count.find(currentSum-k)!=count.end()){
-                totalSubarrays+=count[currentSum-k];
+            prefixSum+=num;
+            if(count.find(prefixSum-k)!=count.end()){
+                totalSubarrays+=count[prefixSum-k];
             }
-            count[currentSum]++;
+            count[prefixSum]++;
         }
         return totalSubarrays;
     }
