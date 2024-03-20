@@ -7,7 +7,7 @@ public:
         }
         ListNode* temp2=temp->next;
         for(int i=0;i<=b-a;i++){ //the node moved to get the node after b iteration already moved a iteration so only need to move b-a iteration
-            temp2=temp2->next;
+            temp2=temp2->next;   //also use this looping condition (i=a;i<=b;i++)
         }
         temp->next=list2;
         while(list2->next){ //where the list2's next is empty we need merge the node after b iteration
