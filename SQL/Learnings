@@ -6,3 +6,4 @@ CROSS JOIN - To perform every possible row combinations from both the tables
 NATURAL JOIN -  joins two tables based on the same attribute name and datatypes.
 LEFT/RIGHT  JOIN - all the records from the left/right table are included and non-matching records from the left/right(opp)  table are excluded.
 LEFT/RIGHT OUTER JOIN - all the records from the left/right table are included and non-matching records from the left/right(opp) table are included and the NULL value is displayed for the left/right(opp) table columns.
+FULL JOIN/FULL OUTER JOIN - returns a new table containing all records of the left and right table on a match.It is a  combination of LEFT JOIN and RIGHT JOIN
