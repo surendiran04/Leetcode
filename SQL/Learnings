@@ -1,5 +1,6 @@
 https://www.geeksforgeeks.org/sql-tutorial/?ref=lbp
 
+          ****SQL Join is used to combine data from two or more tables, based on a common field between them.*****
 IN - checks the data is fetched by the subquery ,usually prefered for small set of values
 EXISTS - Checks the exist of the value and retuns true/false ,faster than IN when dealing with larger amount of data
 CROSS JOIN - To perform every possible row combinations from both the tables
