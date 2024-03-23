@@ -7,3 +7,8 @@ NATURAL JOIN -  joins two tables based on the same attribute name and datatypes.
 LEFT/RIGHT  JOIN - all the records from the left/right table are included and non-matching records from the left/right(opp)  table are excluded.
 LEFT/RIGHT OUTER JOIN - all the records from the left/right table are included and non-matching records from the left/right(opp) table are included and the NULL value is displayed for the left/right(opp) table columns.
 FULL JOIN/FULL OUTER JOIN - returns a new table containing all records of the left and right table on a match.It is a  combination of LEFT JOIN and RIGHT JOIN
+
+
+WHERE VS HAVING - where clause cannot be used with aggregates(COUNT,SUM,AVG ETC...), but the having clause can.Where clause acts as a pre filter where as Having as a post filter.
+SELECT Student, Score FROM Marks WHERE Score >=40;
+SELECT Student, SUM(score) AS total FROM Marks GROUP BY Student HAVING total > 70;
