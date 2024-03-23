@@ -12,3 +12,4 @@ FULL JOIN/FULL OUTER JOIN - returns a new table containing all records of the le
 WHERE VS HAVING - where clause cannot be used with aggregates(COUNT,SUM,AVG ETC...), but the having clause can.Where clause acts as a pre filter where as Having as a post filter.
 SELECT Student, Score FROM Marks WHERE Score >=40;
 SELECT Student, SUM(score) AS total FROM Marks GROUP BY Student HAVING total > 70;
+SELECT name, section FROM tbl GROUP BY name, section HAVING COUNT(*) > 1;  //selects duplicates
