@@ -23,7 +23,7 @@ public:
         // Merge the 2 halves
         ListNode *A = head, *B=prev;
         while (A && B) {
-            ListNode* A_next=A->next;
+            ListNode* A_next=A->next;   //here the merging makes the head and then the original last node then head->next and last before node and goes on
             ListNode *B_next=B->next;
 
             A->next=B;
