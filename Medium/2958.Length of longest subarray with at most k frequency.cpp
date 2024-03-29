@@ -24,12 +24,12 @@ public:
     int maxSubarrayLength(vector<int>& nums, int k) {
         unordered_map<int,int> map;
         int n = nums.size();
-        int l = 0, r = 0, len {};
+        int l = 0, r = 0, len=0;
         while(r < n)
         {
             int cur = nums[r++];
             map[cur]++;
-            while(l < r && map[cur] > k)
+            while(l < r && map[cur] > k) //when the element occurs more than k times then increase l and the decrease the freq of that num in map
             {
                 map[nums[l++]]--;
             }
