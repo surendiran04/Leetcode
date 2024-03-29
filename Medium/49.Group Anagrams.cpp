@@ -6,7 +6,7 @@ public:
        for(string s:strs){
         string key=s;
         sort(key.begin(),key.end());
-        map[key].push_back(s);
+        map[key].push_back(s); //based on the key the sting is pushed to map
        }
        for(auto s:map){
         v.push_back(s.second);
