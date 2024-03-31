@@ -15,3 +15,18 @@ public:
         return n==1;
     }
 };
+class Solution { //iterative approach
+public:
+    bool isPowerOfThree(int n) {
+        while(n>1){
+            if(n%3!=0){
+                return false;
+            }
+            n=n/3;
+        }
+        if(n==1){ //if it is divided by 4 then it gives 1 as quotient
+            return true;
+        }
+        return false;
+    }
+};
