@@ -26,7 +26,7 @@ public:
         unordered_set<int> uniqueCountsSet;
         for (const auto& entry: occurrencesMap) {
             if (!uniqueCountsSet.insert(entry.second).second) { //the insert fn returns two values: first-inserted element's position an                                                                  
-                 return false;
+                 return false;                                  //second-whether it is inserted or not (true/false)
             }
         }
 
