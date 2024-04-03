@@ -1,3 +1,13 @@
+class Solution { //best approach using xor 
+public:
+    int singleNumber(vector<int>& nums) {
+        int result=0;
+        for(int num:nums){ // x^x=0, 0^x=x 
+            result^=num;
+        }
+        return result;
+    }
+};
 //optimized my map
 class Solution {
 public:
