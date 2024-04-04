@@ -1,6 +1,6 @@
 class Solution { //best approach using xor 
 public:
-    int singleNumber(vector<int>& nums) {
+    int singleNumber(vector<int>& nums) { //this approach is the best
         int result=0;
         for(int num:nums){ // x^x=0, 0^x=x 
             result^=num;
