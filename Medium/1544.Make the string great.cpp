@@ -17,7 +17,7 @@ public:
         return ans;
     }
 };
-//another best approach
+//another best approach - uses less space
 class Solution {
 public:
     bool check(char x, char y) {
