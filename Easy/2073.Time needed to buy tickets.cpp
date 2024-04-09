@@ -14,3 +14,25 @@ public:
         return time;
     }
 };
+class Solution { //queue based approach - beats 50% 
+public:
+    int timeRequiredToBuy(vector<int>& tickets, int k) {
+        queue<pair<int, int>> queue;
+        for (int i = 0; i < tickets.size(); i++) {
+            queue.push(make_pair(tickets[i], i)); //make_pair function is a utility function in C++ that creates a pair object
+        }
+        int time=0;
+        while (true) {
+            pair<int, int> item = queue.front();
+            queue.pop();
+            if (item.first > 0) {
+                item.first--;
+                time++;
+                queue.push(item);
+            }
+            if (item.first == 0 && item.second == k) {
+                return time;
+            }
+        }
+    }
+    };
