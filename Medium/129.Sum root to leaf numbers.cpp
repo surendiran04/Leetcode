@@ -1,5 +1,5 @@
-class Solution {
-public:
+class Solution { //beats 100% dfs
+public: 
     int sumNumbers(TreeNode* root) {
          return dfs(root, 0);
     }
