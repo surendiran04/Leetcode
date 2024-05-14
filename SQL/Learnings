@@ -6,8 +6,8 @@ EXISTS - Checks the exist of the value and retuns true/false ,faster than IN whe
 INNER JOIN - returns the records that are common in both the tables(INTERSECTION)
 CROSS JOIN - To perform every possible row combinations from both the tables(CARTESIAN PRODUCT). If WHERE clause is used then it'll act as INNER JOIN
 NATURAL JOIN -  joins two tables based on the same attribute name and datatypes.
-LEFT/RIGHT  JOIN - all the records from the left/right table are included and non-matching records from the left/right(opp)  table are excluded.
-LEFT/RIGHT OUTER JOIN - all the records from the left/right table are included and non-matching records from the left/right(opp) table are included and the NULL value is displayed for the left/right(opp) table columns.
+LEFT/RIGHT  JOIN - all the records from the left/right table are included and non-matching records from the left/right(opp) table are included and the NULL value is displayed for the left/right(opp) table columns
+LEFT/RIGHT OUTER JOIN - Same as LEFT/RIGHT JOIN (In soem databases it may vary)
 FULL JOIN/FULL OUTER JOIN - returns a new table containing all records of the left and right table on a match.It is a  combination of LEFT JOIN and RIGHT JOIN
 
 
