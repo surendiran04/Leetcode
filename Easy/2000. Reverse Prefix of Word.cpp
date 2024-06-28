@@ -1,3 +1,10 @@
+Input: word = "abcdefd", ch = "d"
+Output: "dcbaefd"
+Input: word = "abcd", ch = "z"
+Output: "abcd"
+
+//reversing the prefix until 'ch' in the given string
+    
 class Solution {
 public:
     string reversePrefix(string word, char ch) {
