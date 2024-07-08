@@ -23,7 +23,7 @@ Explanation: The friends leave in this order: 5, 4, 6, 2, 3. The winner is frien
 Input: n = 6, k = 5
 Output: 1
   
-class Solution {
+class Solution { // Time- O(n^2)
 public:
     int findTheWinner(int n, int k) {
         vector<int> circle;
@@ -37,5 +37,17 @@ public:
             cur_index=next_to_remove;
         }
         return circle[0];
+    }
+};
+
+class Solution { //- Bottom-up dp approach with O(n) time and O(1) space
+
+public:
+    int findTheWinner(int n, int k) {
+        int res = 0;
+        for (int player_num = 2; player_num <= n; ++player_num) {
+            res = (res + k) % player_num;
+        }
+        return res + 1;
     }
 };
